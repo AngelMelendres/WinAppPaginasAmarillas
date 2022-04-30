@@ -122,6 +122,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\ClassPaginasAmarillas.datasource" />
+    <None Include="Properties\DataSources\cServicio.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\FormBuscar.datasource" />
+    <None Include="Properties\DataSources\FormEliminar.datasource" />
+    <None Include="Properties\DataSources\FormIngresarDatos.datasource" />
+    <None Include="Properties\DataSources\FormListar.datasource" />
+    <None Include="Properties\DataSources\FormModificar.datasource" />
+    <None Include="Properties\DataSources\FormMostrarDatos.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\WinAppPaginasAmarillas.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\WinAppPaginasAmarillas.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

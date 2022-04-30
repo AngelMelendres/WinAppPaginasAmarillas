@@ -16,17 +16,7 @@ namespace WinAppPaginasAmarillas
         public void agregarServicio()
         {
      
-             string titulo="";
-             string descripcion = "";
-             string propietario = "";
-             string telefono = "";
-             string tipoServicio = "";
-             string email = "";
-             string direccion = "";
-
-            servicios[contador] = new cServicio(contador);
-            servicios[contador].agregarServicio(titulo,descripcion,propietario,telefono,tipoServicio,email,direccion);
-            contador++;
+            
 
         }
 

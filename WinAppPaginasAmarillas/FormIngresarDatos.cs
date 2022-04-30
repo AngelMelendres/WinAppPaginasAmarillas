@@ -36,8 +36,8 @@ namespace WinAppPaginasAmarillas
             txtDescripcion.Clear();
             txtPropietario.Clear();
             txtEmail.Clear();
-            txtTelefono.clear();
-            txtTipoServicio.Clear();
+            txtTelefono.Clear();
+            //txtTipoServicio.Clear();
             txtDireccion.Clear();
 
         }
@@ -54,12 +54,11 @@ namespace WinAppPaginasAmarillas
             cServicio servicio = servicios[posicion];
             //lo que tiene el atributo se lo doy al textbox
             txtTitulo.Text = servicio.getTitulo();
-            txtDescripcion = servicio.getDescripcion();
-            txtPropietario = servicio.getPropietario();
-            txtEmail = servicio.getEmail();
-            txtTelefono = servicio.getTelefono();
-            txtTipoServicio = servicio.getTipoServicio();
-            txtDireccion = servicio.getDireccion();
+            txtDescripcion.Text = servicio.getDescripcion();
+            txtPropietario.Text = servicio.getPropietario();
+            txtEmail.Text = servicio.getEmail();
+            txtTelefono.Text = servicio.getTelefono();
+            txtDireccion.Text = servicio.getDireccion();
 
         }
 
@@ -72,12 +71,19 @@ namespace WinAppPaginasAmarillas
             servicio.setTelefono(txtTitulo.Text);
             servicio.setDireccion(txtTitulo.Text);
             servicio.setPropietario(txtTitulo.Text);
-            servicio.setTipoServicio(txt.TipoServicio.text);
+            //servicio.setTipoServicio(txt.TipoServicio.text);
             servicio.setEmail(txtTitulo.Text);
+
+            servicios.Add(servicio);
 
             actualizarGrid();//llamamos al procedimiento que guarda en datagrid
             reseteo(); //llamamos al método que resetea
 
+            for (int i = 0; i < servicios.Count; i++)
+            {
+                listBox1.Items.Add(servicios[i].getTitulo());
+            }
+           
         }
     }
 }
