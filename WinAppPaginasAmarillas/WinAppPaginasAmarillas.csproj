@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassPaginasAmarillas.cs" />
+    <Compile Include="cServicio.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -33,8 +33,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvListadoServicios = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoServicios)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -76,20 +77,32 @@
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 5;
             // 
-            // dataGridView1
+            // dgvListadoServicios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 273);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(493, 242);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvListadoServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListadoServicios.Location = new System.Drawing.Point(19, 273);
+            this.dgvListadoServicios.Name = "dgvListadoServicios";
+            this.dgvListadoServicios.Size = new System.Drawing.Size(493, 242);
+            this.dgvListadoServicios.TabIndex = 9;
+            this.dgvListadoServicios.DoubleClick += new System.EventHandler(this.dgvListadoServicios_DoubleClick);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(577, 337);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 10;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FormIngresarDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(706, 541);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dgvListadoServicios);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -97,7 +110,8 @@
             this.Controls.Add(this.label1);
             this.Name = "FormIngresarDatos";
             this.Text = "FormIngresarDatos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FormIngresarDatos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoServicios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +124,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListadoServicios;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
