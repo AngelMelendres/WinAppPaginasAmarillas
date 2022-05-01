@@ -6,23 +6,33 @@ using System.Threading.Tasks;
 
 namespace WinAppPaginasAmarillas
 {
-  
+    
     class ClassPaginasAmarillas
     {
-        cServicio[] servicios = new cServicio[20];
-        int contador = 0;
+        private List<cServicio> servicios = new List<cServicio>();
 
 
-        public void agregarServicio()
+        public void agregarServicio(string titulo, string descripcion, string telefono, string propietario, string email, string direccion)
         {
-     
-            
+
+            cServicio servicio = new cServicio();
+            servicio.setTitulo(titulo);
+            servicio.setDescripcion(descripcion);
+            servicio.setTelefono(telefono);
+            servicio.setDireccion(direccion);
+            servicio.setPropietario(propietario);
+            //servicio.setTipoServicio(txt.TipoServicio.text);
+            servicio.setEmail(email);
+
+            servicios.Add(servicio);
+
+          
 
         }
 
         public void eliminarServicio(int id)
         {
-            
+            servicios.RemoveAt(id);
         }
 
         public void editarServicio(int id)
@@ -32,12 +42,12 @@ namespace WinAppPaginasAmarillas
 
         public void mostrarServicioId(int id)
         {
+            
+        }
 
-        }   
-
-        public void mostrarTodosServicios()
+        public List<cServicio> mostrarTodosServicios()
         {
-
+            return servicios;
         }
 
     }

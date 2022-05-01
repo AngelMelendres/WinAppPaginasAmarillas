@@ -12,8 +12,8 @@ namespace WinAppPaginasAmarillas
 {
     public partial class FormIngresarDatos : Form
     {
-        private List<cServicio> servicios = new List<cServicio>();
-        private int edit_indice = -1;
+      
+        ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
 
         public FormIngresarDatos()
         {
@@ -22,13 +22,13 @@ namespace WinAppPaginasAmarillas
 
         private void FormIngresarDatos_Load(object sender, EventArgs e)
         {
-
+            actualizarGrid();
         }
 
         private void actualizarGrid()
         {
             dgvListadoServicios.DataSource = null;
-            dgvListadoServicios.DataSource = servicios; 
+            dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios(); 
         }
         private void reseteo()
         {
@@ -42,47 +42,55 @@ namespace WinAppPaginasAmarillas
 
         }
 
-        private void dgvListadoServicios_DoubleClick(object sender, EventArgs e)
+
+        public bool validarDatos()
         {
-            DataGridViewRow selected = dgvListadoServicios.SelectedRows[0];
-            //almacena en cual fila estoy
+            
 
-            int posicion = dgvListadoServicios.Rows.IndexOf(selected);
-            //copio esa variable en índice editado
+            if (txtTitulo.Text == null || txtTitulo.Text=="")
+            {
+                MessageBox.Show("Ingrese titulo");
+                
+                return true ;
+                
+            }
+            if (txtDescripcion.Text == null || txtDescripcion.Text == "")
+            {
+                MessageBox.Show("Ingrese Descripcion");
+                return true;
 
-            edit_indice = posicion; 
-            cServicio servicio = servicios[posicion];
-            //lo que tiene el atributo se lo doy al textbox
-            txtTitulo.Text = servicio.getTitulo();
-            txtDescripcion.Text = servicio.getDescripcion();
-            txtPropietario.Text = servicio.getPropietario();
-            txtEmail.Text = servicio.getEmail();
-            txtTelefono.Text = servicio.getTelefono();
-            txtDireccion.Text = servicio.getDireccion();
+            }
+            if (txtPropietario.Text == null || txtPropietario.Text == "")
+            {
+                MessageBox.Show("Ingrese Propietario");
+                return true;
+            }
+            if (txtTelefono.Text == null || txtTelefono.Text == "")
+            {
+                MessageBox.Show("Ingrese telefono");
+                return true;
+            }
+            if (txtEmail.Text == null || txtEmail.Text == "")
+            {
+                MessageBox.Show("Ingrese Email");
+                return true;
+            }
+            if (txtDireccion.Text == null || txtDireccion.Text == "")
+            {
+                MessageBox.Show("Ingrese direccion");
+                return true;
+            }
 
+
+            return false;
         }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            cServicio servicio = new cServicio(1);
 
-            servicio.setTitulo(txtTitulo.Text);
-            servicio.setDescripcion(txtTitulo.Text);
-            servicio.setTelefono(txtTitulo.Text);
-            servicio.setDireccion(txtTitulo.Text);
-            servicio.setPropietario(txtTitulo.Text);
-            //servicio.setTipoServicio(txt.TipoServicio.text);
-            servicio.setEmail(txtTitulo.Text);
-
-            servicios.Add(servicio);
-
+            if (validarDatos()) { return; }
+            objPagina.agregarServicio(txtTitulo.Text,txtDescripcion.Text,txtTelefono.Text,txtPropietario.Text,txtEmail.Text,txtDireccion.Text);
             actualizarGrid();//llamamos al procedimiento que guarda en datagrid
             reseteo(); //llamamos al método que resetea
-
-            for (int i = 0; i < servicios.Count; i++)
-            {
-                listBox1.Items.Add(servicios[i].getTitulo());
-            }
            
         }
     }

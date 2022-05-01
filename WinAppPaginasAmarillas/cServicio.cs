@@ -19,10 +19,10 @@ namespace WinAppPaginasAmarillas
 
 
 
-        public cServicio(int id)
+        public cServicio()
         {
             this.id = 1;
-            this.titulo = "sp";
+            this.titulo = "s/t";
             this.descripcion = "s/d";
             this.propietario = "s/p";
             this.email = "sin email";
@@ -31,14 +31,14 @@ namespace WinAppPaginasAmarillas
             this.direccion = "sin dir";
         }
 
-        public int getId() { return id; }
-        public string getTitulo() { return titulo; }
-        public string getDescripcion() { return descripcion; }
-        public string getPropietario() { return propietario; }
-        public string getEmail() { return email; }
-        public string getTelefono() { return telefono; }
-        public string getTipoServicio() { return tipoServicio; }    
-        public string getDireccion() { return direccion; }
+        public int getId() { return this.id; }
+        public string getTitulo() { return this.titulo; }
+        public string getDescripcion() { return this.descripcion; }
+        public string getPropietario() { return this.propietario; }
+        public string getEmail() { return this.email; }
+        public string getTelefono() { return this.telefono; }
+        public string getTipoServicio() { return this.tipoServicio; }    
+        public string getDireccion() { return this.direccion; }
 
         public void setTitulo(string titulo) { this.titulo = titulo; }
         public void setId(int id) { this.id = id; }
