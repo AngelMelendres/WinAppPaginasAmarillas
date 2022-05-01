@@ -15,7 +15,7 @@ namespace WinAppPaginasAmarillas
        
         ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
         List<cServicio> lista = ClassPaginasAmarillas.Instance.mostrarTodosServicios();
-        private int edit_indice = -1;
+        private int id = 0;
         public FormEliminar()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace WinAppPaginasAmarillas
         }
         private void FormEliminar_Load(object sender, EventArgs e)
         {
-            actualizarGrid(lista);
+            actualizarGrid(ClassPaginasAmarillas.Instance.mostrarTodosServicios());
 
         }
 
@@ -45,6 +45,7 @@ namespace WinAppPaginasAmarillas
                 dgvListadoServicios.Rows[j].Cells[4].Value = lista.ToArray()[j].getTelefono();
                 dgvListadoServicios.Rows[j].Cells[5].Value = lista.ToArray()[j].getEmail();
                 dgvListadoServicios.Rows[j].Cells[6].Value = lista.ToArray()[j].getDireccion();
+                dgvListadoServicios.Rows[j].Cells[7].Value = lista.ToArray()[j].getId();
 
 
             }
@@ -52,11 +53,14 @@ namespace WinAppPaginasAmarillas
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (edit_indice > -1) //verifica si hay un índice seleccionado
+
+            if (id!= 0) //verifica si hay un índice seleccionado
             {
-                ClassPaginasAmarillas.Instance.eliminarServicio(edit_indice);
-                edit_indice = -1; //resetea variable a -1
+                MessageBox.Show("Seguro de eliminar el srvicio: ", id.ToString());
+                ClassPaginasAmarillas.Instance.eliminarServicio(id);
                 actualizarGrid(ClassPaginasAmarillas.Instance.mostrarTodosServicios());
+                id = 0;
+                
             }
             else
             {
@@ -69,11 +73,7 @@ namespace WinAppPaginasAmarillas
 
         private void dgvListadoServicios_DoubleClick(object sender, EventArgs e)
         {
-            DataGridViewRow selected = dgvListadoServicios.SelectedRows[0];
-            int posicion = dgvListadoServicios.Rows.IndexOf(selected);
-            edit_indice = posicion;
-            cServicio servicio = objPagina.mostrarTodosServicios()[posicion];
-
+           
 
         }
 
@@ -97,12 +97,14 @@ namespace WinAppPaginasAmarillas
             actualizarGrid(ClassPaginasAmarillas.Instance.busquedaPorTitulo(textBoxBusTitulo.Text));
         }
 
-        private void dgvListadoServicios_DoubleClick_1(object sender, EventArgs e)
+        
+
+        
+        private void dgvListadoServicios_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataGridViewRow selected = dgvListadoServicios.SelectedRows[0];
-            int posicion = dgvListadoServicios.Rows.IndexOf(selected); //almacena en cual fila estoy
-            edit_indice = posicion; //copio esa variable en índice editado
+             id = Convert.ToInt32(dgvListadoServicios.Rows[e.RowIndex].Cells[7].Value);
 
         }
     }
+    
 }

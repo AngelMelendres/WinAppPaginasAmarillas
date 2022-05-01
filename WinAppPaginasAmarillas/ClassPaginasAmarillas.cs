@@ -57,11 +57,14 @@ namespace WinAppPaginasAmarillas
 
         public void eliminarServicio(int id)
         {
-            if(id == null || id == 0)
+           for(int i = 0; i < servicios.Count; i++)
             {
-                return;
+                if(servicios[i].getId() == id)
+                {
+                    servicios.RemoveAt(i);
+                }
             }
-            servicios.RemoveAt(id);
+            
 
         }
 
@@ -77,7 +80,7 @@ namespace WinAppPaginasAmarillas
 
         public List<cServicio> mostrarTodosServicios()
         {
-            return this.servicios;
+            return this.servicios ;
 
         }
 

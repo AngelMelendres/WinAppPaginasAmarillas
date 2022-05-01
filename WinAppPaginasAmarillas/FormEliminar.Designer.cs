@@ -44,6 +44,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoServicios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,13 +131,14 @@
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7});
+            this.Column7,
+            this.Column8});
             this.dgvListadoServicios.Location = new System.Drawing.Point(12, 189);
             this.dgvListadoServicios.Name = "dgvListadoServicios";
             this.dgvListadoServicios.RowHeadersWidth = 51;
             this.dgvListadoServicios.Size = new System.Drawing.Size(769, 242);
             this.dgvListadoServicios.TabIndex = 16;
-            this.dgvListadoServicios.DoubleClick += new System.EventHandler(this.dgvListadoServicios_DoubleClick_1);
+            this.dgvListadoServicios.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvListadoServicios_RowHeaderMouseClick);
             // 
             // Column1
             // 
@@ -172,6 +174,11 @@
             // 
             this.Column7.HeaderText = "EMAIL";
             this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "id";
+            this.Column8.Name = "Column8";
             // 
             // FormEliminar
             // 
@@ -214,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
     }
 }
