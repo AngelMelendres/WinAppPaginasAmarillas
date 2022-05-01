@@ -12,6 +12,12 @@ namespace WinAppPaginasAmarillas
 {
     public partial class Form1 : Form
     {
+
+        ClassPaginasAmarillas Pagina = new ClassPaginasAmarillas();
+        
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -83,6 +89,14 @@ namespace WinAppPaginasAmarillas
         private void btnListar_Click(object sender, EventArgs e)
         {
             AbrirFormulario<FormListar>();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormIngresarDatos forme = new FormIngresarDatos();
+            
+            
+            forme.ShowDialog();
         }
     }
 }

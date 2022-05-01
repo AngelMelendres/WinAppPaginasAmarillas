@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace WinAppPaginasAmarillas
 {
-    public partial class FormIngresarDatos : Form
+    public partial class FormIngresarDatos : Form 
     {
-      
+
+
         ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
-        
 
         public FormIngresarDatos()
         {
@@ -28,22 +28,31 @@ namespace WinAppPaginasAmarillas
 
         private void actualizarGrid()
         {
-            
-           // dgvListadoServicios.DataSource = null;
+
+            // dgvListadoServicios.DataSource = null;
 
             //dgvListadoServicios.AutoGenerateColumns = true;
             //dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
 
-        
 
-            dgvListadoServicios.Rows.Add();
-            for (int j = 0; j <objPagina.mostrarTodosServicios().Count; j++)
+
+            for (int j = 0; j < objPagina.mostrarTodosServicios().Count; j++)
             {
-                
-                dgvListadoServicios.Rows[j].Cells[j].Value = objPagina.mostrarTodosServicios().ToArray()[j].getTitulo();
-                
+                dgvListadoServicios.Rows.Add();
+
+
+                dgvListadoServicios.Rows[j].Cells[0].Value = objPagina.mostrarTodosServicios().ToArray()[j].getTitulo();
+                dgvListadoServicios.Rows[j].Cells[1].Value = objPagina.mostrarTodosServicios().ToArray()[j].getPropietario();
+                dgvListadoServicios.Rows[j].Cells[2].Value = objPagina.mostrarTodosServicios().ToArray()[j].getDescripcion();
+                dgvListadoServicios.Rows[j].Cells[3].Value = objPagina.mostrarTodosServicios().ToArray()[j].getDireccion();
+                dgvListadoServicios.Rows[j].Cells[4].Value = objPagina.mostrarTodosServicios().ToArray()[j].getTelefono();
+                dgvListadoServicios.Rows[j].Cells[5].Value = objPagina.mostrarTodosServicios().ToArray()[j].getCategoria();
+                dgvListadoServicios.Rows[j].Cells[6].Value = objPagina.mostrarTodosServicios().ToArray()[j].getEmail();
+
+
+
             }
-            
+
 
 
 
