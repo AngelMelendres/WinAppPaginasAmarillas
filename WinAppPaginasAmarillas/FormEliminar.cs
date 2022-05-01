@@ -19,13 +19,13 @@ namespace WinAppPaginasAmarillas
         {
             InitializeComponent();
         }
-        private void actualizarGrid()
+        private void actualizarGrid(List<cServicio> lista)
         {
 
             dgvListadoServicios.DataSource = null;
 
             dgvListadoServicios.AutoGenerateColumns = true;
-            dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
+            dgvListadoServicios.DataSource = lista;
 
         }
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace WinAppPaginasAmarillas
             {
                 objPagina.eliminarServicio(edit_indice);
                 edit_indice = -1; //resetea variable a -1
-                actualizarGrid();
+                actualizarGrid(objPagina.mostrarTodosServicios());
             }
             else
             {
@@ -51,6 +51,26 @@ namespace WinAppPaginasAmarillas
             cServicio servicio = objPagina.mostrarTodosServicios()[posicion];
 
 
+        }
+
+
+        private void textBoxBusID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            //arreglar no cambia estado del txt2
+            if(textBoxBusID.Text=="")
+            {
+                textBoxBusTitulo.Enabled = true;
+            }
+
+        }
+
+   
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+           
+            actualizarGrid(objPagina.busquedaPorTitulo(textBoxBusTitulo.Text));
         }
     }
 }

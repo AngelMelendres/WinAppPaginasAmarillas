@@ -49,7 +49,28 @@ namespace WinAppPaginasAmarillas
         public List<cServicio> mostrarTodosServicios()
         {
             return this.servicios;
+
         }
+
+        public List<cServicio> busquedaPorTitulo(string busqueda)
+        {
+            
+            List < cServicio > coinsidencias = new List<cServicio>();
+
+            for (int i = 0; i < servicios.Count; i++)
+            {
+                if (busqueda == servicios[i].getTitulo())
+                {
+                    coinsidencias.Add(servicios[i]);
+                    
+                }
+            }
+
+            return coinsidencias;
+
+        }
+
+
 
     }
 

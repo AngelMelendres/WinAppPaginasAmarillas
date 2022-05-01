@@ -29,11 +29,24 @@ namespace WinAppPaginasAmarillas
         private void actualizarGrid()
         {
             
-            dgvListadoServicios.DataSource = null;
+           // dgvListadoServicios.DataSource = null;
 
-            dgvListadoServicios.AutoGenerateColumns = true;
-            dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
+            //dgvListadoServicios.AutoGenerateColumns = true;
+            //dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
+
+        
+
+            dgvListadoServicios.Rows.Add();
+            for (int j = 0; j <objPagina.mostrarTodosServicios().Count; j++)
+            {
+                
+                dgvListadoServicios.Rows[j].Cells[j].Value = objPagina.mostrarTodosServicios().ToArray()[j].getTitulo();
+                
+            }
             
+
+
+
         }
         private void reseteo()
         {
