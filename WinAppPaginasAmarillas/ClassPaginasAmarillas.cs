@@ -9,10 +9,33 @@ namespace WinAppPaginasAmarillas
     
     class ClassPaginasAmarillas
     {
-        private List<cServicio> servicios = new List<cServicio>();
-
         
 
+        private static ClassPaginasAmarillas instance;
+        public static ClassPaginasAmarillas Instance
+        {
+            get
+            {
+                if (instance == null)
+                    instance = new ClassPaginasAmarillas();
+                return instance;
+            }
+        }
+        private List<cServicio> servicios;
+
+
+        public ClassPaginasAmarillas()
+        {
+            nuevaLista();
+        }
+
+
+        public void nuevaLista()
+        {
+            servicios = new List<cServicio>();
+        }
+          
+    
         public void agregarServicio(string titulo, string descripcion, string telefono, string propietario, string email, string direccion, string categoria)
         {
 

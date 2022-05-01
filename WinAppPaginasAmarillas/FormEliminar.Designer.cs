@@ -188,6 +188,7 @@
             this.Controls.Add(this.textBoxBusID);
             this.Name = "FormEliminar";
             this.Text = "FormEliminar";
+            this.Load += new System.EventHandler(this.FormEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoServicios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

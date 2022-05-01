@@ -12,8 +12,6 @@ namespace WinAppPaginasAmarillas
 {
     public partial class Form1 : Form
     {
-
-        ClassPaginasAmarillas Pagina = new ClassPaginasAmarillas();
         
 
 

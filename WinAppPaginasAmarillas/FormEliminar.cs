@@ -12,8 +12,10 @@ namespace WinAppPaginasAmarillas
 {
     public partial class FormEliminar : Form
     {
-        private ClassPaginasAmarillas objPagina;
         private int edit_indice = -1;
+
+        ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
+        List<cServicio> lista = ClassPaginasAmarillas.Instance.mostrarTodosServicios();
 
         public FormEliminar()
         {
@@ -22,31 +24,28 @@ namespace WinAppPaginasAmarillas
           
             
         }
-      
+        private void FormEliminar_Load(object sender, EventArgs e)
+        {
+            actualizarGrid(lista);
+
+        }
 
         private void actualizarGrid(List<cServicio> lista)
         {
-
              // dgvListadoServicios.DataSource = null;
-
             //dgvListadoServicios.AutoGenerateColumns = true;
             //dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
-
-        
-
-            for (int j = 0; j <objPagina.mostrarTodosServicios().Count; j++)
+            for (int j = 0; j <lista.Count; j++)
             {
                 dgvListadoServicios.Rows.Add();
 
-               
-                    dgvListadoServicios.Rows[j].Cells[0].Value = objPagina.mostrarTodosServicios().ToArray()[j].getTitulo();
-                    dgvListadoServicios.Rows[j].Cells[1].Value = objPagina.mostrarTodosServicios().ToArray()[j].getPropietario();
-                    dgvListadoServicios.Rows[j].Cells[2].Value = objPagina.mostrarTodosServicios().ToArray()[j].getDescripcion();
-                    dgvListadoServicios.Rows[j].Cells[3].Value = objPagina.mostrarTodosServicios().ToArray()[j].getDireccion();
-                    dgvListadoServicios.Rows[j].Cells[4].Value = objPagina.mostrarTodosServicios().ToArray()[j].getTelefono();
-                    dgvListadoServicios.Rows[j].Cells[5].Value = objPagina.mostrarTodosServicios().ToArray()[j].getCategoria();
-                    dgvListadoServicios.Rows[j].Cells[6].Value = objPagina.mostrarTodosServicios().ToArray()[j].getEmail();
-
+                dgvListadoServicios.Rows[j].Cells[0].Value = lista.ToArray()[j].getTitulo();
+                dgvListadoServicios.Rows[j].Cells[1].Value = lista.ToArray()[j].getPropietario();
+                dgvListadoServicios.Rows[j].Cells[2].Value = lista.ToArray()[j].getDescripcion();
+                dgvListadoServicios.Rows[j].Cells[3].Value = lista.ToArray()[j].getCategoria();
+                dgvListadoServicios.Rows[j].Cells[4].Value = lista.ToArray()[j].getTelefono();
+                dgvListadoServicios.Rows[j].Cells[5].Value = lista.ToArray()[j].getEmail();
+                dgvListadoServicios.Rows[j].Cells[6].Value = lista.ToArray()[j].getDireccion();
 
 
             }
@@ -94,7 +93,9 @@ namespace WinAppPaginasAmarillas
         private void btnBuscar_Click(object sender, EventArgs e)
         {
            
-            actualizarGrid(objPagina.busquedaPorTitulo(textBoxBusTitulo.Text));
+            actualizarGrid(ClassPaginasAmarillas.Instance.busquedaPorTitulo(textBoxBusTitulo.Text));
         }
+
+      
     }
 }
