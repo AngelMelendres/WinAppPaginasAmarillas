@@ -12,11 +12,10 @@ namespace WinAppPaginasAmarillas
 {
     public partial class FormEliminar : Form
     {
-        private int edit_indice = -1;
-
+       
         ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
         List<cServicio> lista = ClassPaginasAmarillas.Instance.mostrarTodosServicios();
-
+        private int edit_indice = -1;
         public FormEliminar()
         {
             InitializeComponent();
@@ -32,7 +31,7 @@ namespace WinAppPaginasAmarillas
 
         private void actualizarGrid(List<cServicio> lista)
         {
-              dgvListadoServicios.DataSource = null;
+             // dgvListadoServicios.DataSource = null;
             //dgvListadoServicios.AutoGenerateColumns = true;
             //dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
             for (int j = 0; j <lista.Count; j++)
@@ -55,13 +54,15 @@ namespace WinAppPaginasAmarillas
         {
             if (edit_indice > -1) //verifica si hay un índice seleccionado
             {
-                objPagina.eliminarServicio(edit_indice);
+                ClassPaginasAmarillas.Instance.eliminarServicio(edit_indice);
                 edit_indice = -1; //resetea variable a -1
-                actualizarGrid(objPagina.mostrarTodosServicios());
+                actualizarGrid(ClassPaginasAmarillas.Instance.mostrarTodosServicios());
             }
             else
             {
                 MessageBox.Show("Dar doble click sobre elemento para seleccionar y borrar ");
+                actualizarGrid(ClassPaginasAmarillas.Instance.mostrarTodosServicios());
+
             }
 
         }
@@ -96,6 +97,12 @@ namespace WinAppPaginasAmarillas
             actualizarGrid(ClassPaginasAmarillas.Instance.busquedaPorTitulo(textBoxBusTitulo.Text));
         }
 
-      
+        private void dgvListadoServicios_DoubleClick_1(object sender, EventArgs e)
+        {
+            DataGridViewRow selected = dgvListadoServicios.SelectedRows[0];
+            int posicion = dgvListadoServicios.Rows.IndexOf(selected); //almacena en cual fila estoy
+            edit_indice = posicion; //copio esa variable en índice editado
+
+        }
     }
 }

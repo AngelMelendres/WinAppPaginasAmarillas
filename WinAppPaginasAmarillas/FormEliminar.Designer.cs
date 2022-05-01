@@ -136,6 +136,7 @@
             this.dgvListadoServicios.RowHeadersWidth = 51;
             this.dgvListadoServicios.Size = new System.Drawing.Size(769, 242);
             this.dgvListadoServicios.TabIndex = 16;
+            this.dgvListadoServicios.DoubleClick += new System.EventHandler(this.dgvListadoServicios_DoubleClick_1);
             // 
             // Column1
             // 

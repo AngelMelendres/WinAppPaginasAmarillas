@@ -46,7 +46,8 @@ namespace WinAppPaginasAmarillas
                 dgvListadoServicios.Rows[j].Cells[4].Value = lista.ToArray()[j].getTelefono();
                 dgvListadoServicios.Rows[j].Cells[5].Value = lista.ToArray()[j].getEmail();
                 dgvListadoServicios.Rows[j].Cells[6].Value = lista.ToArray()[j].getDireccion();
-               
+
+                dgvListadoServicios.Rows[j].Cells[7].Value = lista.ToArray()[j].getId();
 
 
             }

@@ -40,6 +40,7 @@ namespace WinAppPaginasAmarillas
         {
 
             cServicio servicio = new cServicio();
+            servicio.setId( new Random().Next(1,100000));
             servicio.setTitulo(titulo);
             servicio.setDescripcion(descripcion);
             servicio.setTelefono(telefono);
@@ -56,7 +57,12 @@ namespace WinAppPaginasAmarillas
 
         public void eliminarServicio(int id)
         {
+            if(id == null || id == 0)
+            {
+                return;
+            }
             servicios.RemoveAt(id);
+
         }
 
         public void editarServicio(int id)
