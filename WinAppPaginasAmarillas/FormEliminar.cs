@@ -32,7 +32,7 @@ namespace WinAppPaginasAmarillas
 
         private void actualizarGrid(List<cServicio> lista)
         {
-             // dgvListadoServicios.DataSource = null;
+              dgvListadoServicios.DataSource = null;
             //dgvListadoServicios.AutoGenerateColumns = true;
             //dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
             for (int j = 0; j <lista.Count; j++)
