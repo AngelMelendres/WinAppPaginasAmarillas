@@ -14,6 +14,7 @@ namespace WinAppPaginasAmarillas
     {
       
         ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
+        
 
         public FormIngresarDatos()
         {
@@ -27,8 +28,12 @@ namespace WinAppPaginasAmarillas
 
         private void actualizarGrid()
         {
+            
             dgvListadoServicios.DataSource = null;
-            dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios(); 
+
+            dgvListadoServicios.AutoGenerateColumns = true;
+            dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
+            
         }
         private void reseteo()
         {
@@ -37,7 +42,7 @@ namespace WinAppPaginasAmarillas
             txtPropietario.Clear();
             txtEmail.Clear();
             txtTelefono.Clear();
-            //txtTipoServicio.Clear();
+            comboBoxCategoria.Items.Clear();
             txtDireccion.Clear();
 
         }
@@ -80,18 +85,26 @@ namespace WinAppPaginasAmarillas
                 MessageBox.Show("Ingrese direccion");
                 return true;
             }
+            if(comboBoxCategoria.SelectedIndex.ToString()==null || comboBoxCategoria.SelectedIndex.ToString()== "")
+            {
+                MessageBox.Show("Ingrese Categoria");
+                return true;
+            }
 
 
             return false;
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
-            if (validarDatos()) { return; }
-            objPagina.agregarServicio(txtTitulo.Text,txtDescripcion.Text,txtTelefono.Text,txtPropietario.Text,txtEmail.Text,txtDireccion.Text);
+            
+            //if (validarDatos()) { return; }
+            objPagina.agregarServicio(txtTitulo.Text,txtDescripcion.Text,txtTelefono.Text,txtPropietario.Text,txtEmail.Text,txtDireccion.Text, comboBoxCategoria.SelectedIndex.ToString());
             actualizarGrid();//llamamos al procedimiento que guarda en datagrid
             reseteo(); //llamamos al método que resetea
+            
            
         }
+
+       
     }
 }

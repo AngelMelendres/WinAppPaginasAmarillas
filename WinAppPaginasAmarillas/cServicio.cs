@@ -13,9 +13,10 @@ namespace WinAppPaginasAmarillas
         private string descripcion;
         private string propietario;
         private string telefono;
-        private string tipoServicio;
+        private string categoria;
         private string email;
         private string direccion;
+
 
 
 
@@ -27,7 +28,7 @@ namespace WinAppPaginasAmarillas
             this.propietario = "s/p";
             this.email = "sin email";
             this.telefono = "s/tlf";
-            this.tipoServicio = "s/ts";
+            this.categoria = "sin categoria";
             this.direccion = "sin dir";
         }
 
@@ -37,7 +38,7 @@ namespace WinAppPaginasAmarillas
         public string getPropietario() { return this.propietario; }
         public string getEmail() { return this.email; }
         public string getTelefono() { return this.telefono; }
-        public string getTipoServicio() { return this.tipoServicio; }    
+        public string getCategoria() { return this.categoria; }    
         public string getDireccion() { return this.direccion; }
 
         public void setTitulo(string titulo) { this.titulo = titulo; }
@@ -46,7 +47,7 @@ namespace WinAppPaginasAmarillas
         public void setPropietario(string propietario) { this.propietario = propietario; }
         public void setEmail(string email) { this.email = email; }
         public void setTelefono(string telefono) { this.telefono = telefono; }
-        public void setTipoServicio(string tipoServicio) { this.tipoServicio = tipoServicio; }    
+        public void setCategoria(string categoria) { this.categoria = categoria; }    
         public void setDireccion(string direccion) { this.direccion = direccion; }
 
 

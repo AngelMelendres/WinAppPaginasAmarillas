@@ -45,18 +45,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.listBoxtTipo = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
-            this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoServicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,15 +81,6 @@
             // dgvListadoServicios
             // 
             this.dgvListadoServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListadoServicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
             this.dgvListadoServicios.Location = new System.Drawing.Point(13, 230);
             this.dgvListadoServicios.Name = "dgvListadoServicios";
             this.dgvListadoServicios.RowHeadersWidth = 51;
@@ -171,11 +154,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(382, 95);
+            this.label4.Location = new System.Drawing.Point(393, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 19;
-            this.label4.Text = "TIPO SERVICIO";
+            this.label4.Text = "CATEGORIA";
             // 
             // label5
             // 
@@ -213,18 +196,6 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "DESCRIPCION";
             // 
-            // listBoxtTipo
-            // 
-            this.listBoxtTipo.FormattingEnabled = true;
-            this.listBoxtTipo.Items.AddRange(new object[] {
-            "PREPAGADO",
-            "POSTPAGO",
-            "CONTRATO"});
-            this.listBoxtTipo.Location = new System.Drawing.Point(493, 95);
-            this.listBoxtTipo.Name = "listBoxtTipo";
-            this.listBoxtTipo.Size = new System.Drawing.Size(167, 43);
-            this.listBoxtTipo.TabIndex = 24;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -243,41 +214,6 @@
             this.pictureBox1.TabIndex = 29;
             this.pictureBox1.TabStop = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Titulo";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripcion";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tlf";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Propietario";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Email";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Direccion";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Categoria";
-            this.Column7.Name = "Column7";
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(466, 157);
@@ -287,20 +223,28 @@
             this.button2.Text = "Elejir imagen";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // Column8
+            // comboBoxCategoria
             // 
-            this.Column8.HeaderText = "Tarjeta";
-            this.Column8.Name = "Column8";
+            this.comboBoxCategoria.FormattingEnabled = true;
+            this.comboBoxCategoria.Items.AddRange(new object[] {
+            "PREPAGO",
+            "POSTPAGO",
+            "DOMICILIO",
+            "CONTRATO"});
+            this.comboBoxCategoria.Location = new System.Drawing.Point(496, 101);
+            this.comboBoxCategoria.Name = "comboBoxCategoria";
+            this.comboBoxCategoria.Size = new System.Drawing.Size(165, 21);
+            this.comboBoxCategoria.TabIndex = 31;
             // 
             // FormIngresarDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(793, 523);
+            this.Controls.Add(this.comboBoxCategoria);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.listBoxtTipo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -347,17 +291,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox listBoxtTipo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewImageColumn Column8;
+        private System.Windows.Forms.ComboBox comboBoxCategoria;
     }
 }

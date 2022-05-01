@@ -11,8 +11,9 @@ namespace WinAppPaginasAmarillas
     {
         private List<cServicio> servicios = new List<cServicio>();
 
+        
 
-        public void agregarServicio(string titulo, string descripcion, string telefono, string propietario, string email, string direccion)
+        public void agregarServicio(string titulo, string descripcion, string telefono, string propietario, string email, string direccion, string categoria)
         {
 
             cServicio servicio = new cServicio();
@@ -21,7 +22,7 @@ namespace WinAppPaginasAmarillas
             servicio.setTelefono(telefono);
             servicio.setDireccion(direccion);
             servicio.setPropietario(propietario);
-            //servicio.setTipoServicio(txt.TipoServicio.text);
+            servicio.setCategoria(categoria);
             servicio.setEmail(email);
 
             servicios.Add(servicio);
@@ -47,7 +48,7 @@ namespace WinAppPaginasAmarillas
 
         public List<cServicio> mostrarTodosServicios()
         {
-            return servicios;
+            return this.servicios;
         }
 
     }
