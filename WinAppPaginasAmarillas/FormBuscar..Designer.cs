@@ -45,13 +45,17 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxCategoria = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoServicios)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(913, 601);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 8;
@@ -61,17 +65,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(367, 11);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(333, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 16);
+            this.label1.Size = new System.Drawing.Size(404, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "BUSCAR SERVICIO DE PAGINAS AMARILLAS";
             // 
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(409, 556);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(160, 62);
             this.btnEliminar.TabIndex = 14;
@@ -100,24 +106,24 @@
             // textBoxBusTitulo
             // 
             this.textBoxBusTitulo.Location = new System.Drawing.Point(271, 142);
-            this.textBoxBusTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBusTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBusTitulo.Name = "textBoxBusTitulo";
-            this.textBoxBusTitulo.Size = new System.Drawing.Size(132, 22);
+            this.textBoxBusTitulo.Size = new System.Drawing.Size(219, 22);
             this.textBoxBusTitulo.TabIndex = 6;
             // 
             // textBoxBusID
             // 
             this.textBoxBusID.Location = new System.Drawing.Point(271, 98);
-            this.textBoxBusID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxBusID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBusID.Name = "textBoxBusID";
-            this.textBoxBusID.Size = new System.Drawing.Size(132, 22);
+            this.textBoxBusID.Size = new System.Drawing.Size(219, 22);
             this.textBoxBusID.TabIndex = 5;
             this.textBoxBusID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBusID_KeyPress);
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(427, 105);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(550, 122);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 62);
             this.btnBuscar.TabIndex = 15;
@@ -138,7 +144,7 @@
             this.Column7,
             this.Column8});
             this.dgvListadoServicios.Location = new System.Drawing.Point(16, 233);
-            this.dgvListadoServicios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvListadoServicios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvListadoServicios.Name = "dgvListadoServicios";
             this.dgvListadoServicios.RowHeadersWidth = 51;
             this.dgvListadoServicios.Size = new System.Drawing.Size(1025, 298);
@@ -201,25 +207,62 @@
             this.Column8.Name = "Column8";
             this.Column8.Width = 125;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(142)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1041, 53);
+            this.panel1.TabIndex = 17;
+            // 
+            // comboBoxCategoria
+            // 
+            this.comboBoxCategoria.FormattingEnabled = true;
+            this.comboBoxCategoria.Items.AddRange(new object[] {
+            "PREPAGO",
+            "POSTPAGO",
+            "DOMICILIO",
+            "CONTRATO"});
+            this.comboBoxCategoria.Location = new System.Drawing.Point(271, 186);
+            this.comboBoxCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxCategoria.Name = "comboBoxCategoria";
+            this.comboBoxCategoria.Size = new System.Drawing.Size(219, 24);
+            this.comboBoxCategoria.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(91, 189);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(128, 16);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Buscar por cateroría";
+            // 
             // FormEliminar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 644);
+            this.Controls.Add(this.comboBoxCategoria);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvListadoServicios);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxBusTitulo);
             this.Controls.Add(this.textBoxBusID);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormEliminar";
             this.Text = "FormBuscar";
             this.Load += new System.EventHandler(this.FormEliminar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoServicios)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +287,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBoxCategoria;
+        private System.Windows.Forms.Label label3;
     }
 }
