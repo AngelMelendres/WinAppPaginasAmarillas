@@ -13,15 +13,16 @@ namespace WinAppPaginasAmarillas
     public partial class FormEliminar : Form
     {
        
-        ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
+        
         List<cServicio> lista = ClassPaginasAmarillas.Instance.mostrarTodosServicios();
         private int id = 0;
         public FormEliminar()
         {
             InitializeComponent();
-            
-          
-            
+            actualizarGrid(lista);
+
+
+
         }
         private void FormEliminar_Load(object sender, EventArgs e)
         {
@@ -31,7 +32,10 @@ namespace WinAppPaginasAmarillas
 
         private void actualizarGrid(List<cServicio> lista)
         {
-             // dgvListadoServicios.DataSource = null;
+            dgvListadoServicios.Rows.Clear();
+
+            dgvListadoServicios.Refresh();
+            // dgvListadoServicios.DataSource = null;
             //dgvListadoServicios.AutoGenerateColumns = true;
             //dgvListadoServicios.DataSource = objPagina.mostrarTodosServicios();
             for (int j = 0; j <lista.Count; j++)
@@ -58,22 +62,15 @@ namespace WinAppPaginasAmarillas
             {
                 MessageBox.Show("Seguro de eliminar el srvicio: ", id.ToString());
                 ClassPaginasAmarillas.Instance.eliminarServicio(id);
-                actualizarGrid(ClassPaginasAmarillas.Instance.mostrarTodosServicios());
+                actualizarGrid(lista);
                 id = 0;
-                
             }
             else
             {
                 MessageBox.Show("Dar doble click sobre elemento para seleccionar y borrar ");
-                actualizarGrid(ClassPaginasAmarillas.Instance.mostrarTodosServicios());
+                actualizarGrid(lista);
 
             }
-
-        }
-
-        private void dgvListadoServicios_DoubleClick(object sender, EventArgs e)
-        {
-           
 
         }
 
