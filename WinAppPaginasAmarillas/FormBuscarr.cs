@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WinAppPaginasAmarillas
 {
-    public partial class FormBuscar : Form
+    public partial class FormBuscarr : Form
     {
-        public FormBuscar()
+        public FormBuscarr()
         {
             InitializeComponent();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
     }
 }

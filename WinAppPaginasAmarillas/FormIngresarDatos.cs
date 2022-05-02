@@ -12,14 +12,12 @@ namespace WinAppPaginasAmarillas
 {
     public partial class FormIngresarDatos : Form 
     {
-
-
-        //ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
         List<cServicio> lista = ClassPaginasAmarillas.Instance.mostrarTodosServicios();
 
         public FormIngresarDatos()
         {
             InitializeComponent();
+            actualizarGrid();
         }
 
         private void FormIngresarDatos_Load(object sender, EventArgs e)
@@ -37,8 +35,6 @@ namespace WinAppPaginasAmarillas
             for (int j = 0; j < lista.Count; j++)
             {
                 dgvListadoServicios.Rows.Add();
-
-
                 dgvListadoServicios.Rows[j].Cells[0].Value = lista.ToArray()[j].getTitulo();
                 dgvListadoServicios.Rows[j].Cells[1].Value = lista.ToArray()[j].getPropietario();
                 dgvListadoServicios.Rows[j].Cells[2].Value = lista.ToArray()[j].getDescripcion();
@@ -47,12 +43,9 @@ namespace WinAppPaginasAmarillas
                 dgvListadoServicios.Rows[j].Cells[5].Value = lista.ToArray()[j].getEmail();
                 dgvListadoServicios.Rows[j].Cells[6].Value = lista.ToArray()[j].getDireccion();
                 dgvListadoServicios.Rows[j].Cells[7].Value = lista.ToArray()[j].getId();
-
-
             }
-
-
         }
+
         private void reseteo()
         {
             txtTitulo.Clear();

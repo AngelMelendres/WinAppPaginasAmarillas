@@ -53,17 +53,17 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEliminar.cs">
+    <Compile Include="FormBuscarr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEliminar.Designer.cs">
-      <DependentUpon>FormEliminar.cs</DependentUpon>
+    <Compile Include="FormBuscarr.Designer.cs">
+      <DependentUpon>FormBuscarr.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuscar..cs">
+    <Compile Include="FormEliminar..cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuscar..Designer.cs">
-      <DependentUpon>FormBuscar..cs</DependentUpon>
+    <Compile Include="FormEliminar..Designer.cs">
+      <DependentUpon>FormEliminar..cs</DependentUpon>
     </Compile>
     <Compile Include="FormIngresarDatos.cs">
       <SubType>Form</SubType>
@@ -94,11 +94,11 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEliminar.resx">
-      <DependentUpon>FormEliminar.cs</DependentUpon>
+    <EmbeddedResource Include="FormBuscarr.resx">
+      <DependentUpon>FormBuscarr.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuscar..resx">
-      <DependentUpon>FormBuscar..cs</DependentUpon>
+    <EmbeddedResource Include="FormEliminar..resx">
+      <DependentUpon>FormEliminar..cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIngresarDatos.resx">
       <DependentUpon>FormIngresarDatos.cs</DependentUpon>

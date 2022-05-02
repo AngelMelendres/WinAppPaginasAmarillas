@@ -66,7 +66,7 @@ namespace WinAppPaginasAmarillas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<FormBuscar>();
+            AbrirFormulario<FormBuscarr>();
         }
 
         private void btneliminar_Click(object sender, EventArgs e)
