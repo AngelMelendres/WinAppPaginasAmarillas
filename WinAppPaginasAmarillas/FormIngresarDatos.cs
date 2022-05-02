@@ -14,7 +14,7 @@ namespace WinAppPaginasAmarillas
     {
 
 
-        ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
+        //ClassPaginasAmarillas objPagina = new ClassPaginasAmarillas();
         List<cServicio> lista = ClassPaginasAmarillas.Instance.mostrarTodosServicios();
 
         public FormIngresarDatos()
@@ -46,13 +46,10 @@ namespace WinAppPaginasAmarillas
                 dgvListadoServicios.Rows[j].Cells[4].Value = lista.ToArray()[j].getTelefono();
                 dgvListadoServicios.Rows[j].Cells[5].Value = lista.ToArray()[j].getEmail();
                 dgvListadoServicios.Rows[j].Cells[6].Value = lista.ToArray()[j].getDireccion();
-
                 dgvListadoServicios.Rows[j].Cells[7].Value = lista.ToArray()[j].getId();
 
 
             }
-
-
 
 
         }
@@ -72,7 +69,6 @@ namespace WinAppPaginasAmarillas
         public bool validarDatos()
         {
             
-
             if (txtTitulo.Text == null || txtTitulo.Text=="")
             {
                 MessageBox.Show("Ingrese titulo");
