@@ -30,6 +30,7 @@
         {
             this.panelcontenedor = new System.Windows.Forms.Panel();
             this.panelformularios = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelcontenedor.SuspendLayout();
             this.panelformularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,6 +79,16 @@
             this.panelformularios.Name = "panelformularios";
             this.panelformularios.Size = new System.Drawing.Size(840, 555);
             this.panelformularios.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(312, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 63);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -247,7 +257,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.label1.Location = new System.Drawing.Point(22, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 16);
+            this.label1.Size = new System.Drawing.Size(110, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Menu Principal";
             // 
@@ -270,16 +280,6 @@
             this.btncerrar.TabIndex = 0;
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(294, 340);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 63);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
