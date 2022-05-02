@@ -89,12 +89,5 @@ namespace WinAppPaginasAmarillas
             AbrirFormulario<FormListar>();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormIngresarDatos forme = new FormIngresarDatos();
-            
-            
-            forme.ShowDialog();
-        }
     }
 }
