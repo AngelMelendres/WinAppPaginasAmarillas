@@ -45,6 +45,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelcontenedor.SuspendLayout();
             this.panelformularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,28 +64,32 @@
             this.panelcontenedor.Controls.Add(this.panel1);
             this.panelcontenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontenedor.Location = new System.Drawing.Point(0, 0);
+            this.panelcontenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelcontenedor.Name = "panelcontenedor";
-            this.panelcontenedor.Size = new System.Drawing.Size(1040, 595);
+            this.panelcontenedor.Size = new System.Drawing.Size(1387, 732);
             this.panelcontenedor.TabIndex = 0;
             // 
             // panelformularios
             // 
             this.panelformularios.BackColor = System.Drawing.SystemColors.Control;
+            this.panelformularios.Controls.Add(this.listBox1);
             this.panelformularios.Controls.Add(this.button1);
             this.panelformularios.Controls.Add(this.label2);
             this.panelformularios.Controls.Add(this.pictureBox2);
             this.panelformularios.Controls.Add(this.pictureBox1);
             this.panelformularios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelformularios.Location = new System.Drawing.Point(200, 40);
+            this.panelformularios.Location = new System.Drawing.Point(267, 49);
+            this.panelformularios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelformularios.Name = "panelformularios";
-            this.panelformularios.Size = new System.Drawing.Size(840, 555);
+            this.panelformularios.Size = new System.Drawing.Size(1120, 683);
             this.panelformularios.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(312, 150);
+            this.button1.Location = new System.Drawing.Point(736, 197);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 63);
+            this.button1.Size = new System.Drawing.Size(131, 78);
             this.button1.TabIndex = 3;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -93,19 +98,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 281);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(76, 346);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Integrantes:";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::WinAppPaginasAmarillas.Properties.Resources.paginas_amarillas;
-            this.pictureBox2.Location = new System.Drawing.Point(469, 244);
+            this.pictureBox2.Location = new System.Drawing.Point(625, 300);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(274, 195);
+            this.pictureBox2.Size = new System.Drawing.Size(365, 240);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -113,9 +118,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WinAppPaginasAmarillas.Properties.Resources.ESPOCH;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(176, 176);
+            this.pictureBox1.Size = new System.Drawing.Size(235, 217);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -130,9 +136,10 @@
             this.panelmenu.Controls.Add(this.btnmodificar);
             this.panelmenu.Controls.Add(this.btnIngresar);
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelmenu.Location = new System.Drawing.Point(0, 40);
+            this.panelmenu.Location = new System.Drawing.Point(0, 49);
+            this.panelmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(200, 555);
+            this.panelmenu.Size = new System.Drawing.Size(267, 683);
             this.panelmenu.TabIndex = 1;
             // 
             // btnListar
@@ -143,10 +150,11 @@
             this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnListar.Location = new System.Drawing.Point(0, 476);
+            this.btnListar.Location = new System.Drawing.Point(0, 586);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListar.Name = "btnListar";
             this.btnListar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnListar.Size = new System.Drawing.Size(200, 36);
+            this.btnListar.Size = new System.Drawing.Size(267, 44);
             this.btnListar.TabIndex = 5;
             this.btnListar.Text = "LISTAR DATOS";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -160,10 +168,11 @@
             this.btnmostrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmostrar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnmostrar.Location = new System.Drawing.Point(0, 403);
+            this.btnmostrar.Location = new System.Drawing.Point(0, 496);
+            this.btnmostrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnmostrar.Size = new System.Drawing.Size(200, 36);
+            this.btnmostrar.Size = new System.Drawing.Size(267, 44);
             this.btnmostrar.TabIndex = 4;
             this.btnmostrar.Text = "MOSTRAR DATOS";
             this.btnmostrar.UseVisualStyleBackColor = true;
@@ -177,10 +186,11 @@
             this.btneliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btneliminar.Location = new System.Drawing.Point(0, 258);
+            this.btneliminar.Location = new System.Drawing.Point(0, 318);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btneliminar.Size = new System.Drawing.Size(200, 36);
+            this.btneliminar.Size = new System.Drawing.Size(267, 44);
             this.btneliminar.TabIndex = 1;
             this.btneliminar.Text = "ELIMINAR";
             this.btneliminar.UseVisualStyleBackColor = true;
@@ -194,10 +204,11 @@
             this.btnbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnbuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbuscar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnbuscar.Location = new System.Drawing.Point(0, 188);
+            this.btnbuscar.Location = new System.Drawing.Point(0, 231);
+            this.btnbuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnbuscar.Size = new System.Drawing.Size(200, 36);
+            this.btnbuscar.Size = new System.Drawing.Size(267, 44);
             this.btnbuscar.TabIndex = 2;
             this.btnbuscar.Text = "BUSCAR";
             this.btnbuscar.UseVisualStyleBackColor = true;
@@ -211,10 +222,11 @@
             this.btnmodificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmodificar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnmodificar.Location = new System.Drawing.Point(0, 325);
+            this.btnmodificar.Location = new System.Drawing.Point(0, 400);
+            this.btnmodificar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnmodificar.Name = "btnmodificar";
             this.btnmodificar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnmodificar.Size = new System.Drawing.Size(200, 36);
+            this.btnmodificar.Size = new System.Drawing.Size(267, 44);
             this.btnmodificar.TabIndex = 3;
             this.btnmodificar.Text = "MODIFICAR";
             this.btnmodificar.UseVisualStyleBackColor = true;
@@ -228,10 +240,11 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnIngresar.Location = new System.Drawing.Point(0, 122);
+            this.btnIngresar.Location = new System.Drawing.Point(0, 150);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnIngresar.Size = new System.Drawing.Size(200, 36);
+            this.btnIngresar.Size = new System.Drawing.Size(267, 44);
             this.btnIngresar.TabIndex = 0;
             this.btnIngresar.Text = "INGRESAR DATOS";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -245,8 +258,9 @@
             this.panel1.Controls.Add(this.btncerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 40);
+            this.panel1.Size = new System.Drawing.Size(1387, 49);
             this.panel1.TabIndex = 0;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
@@ -255,18 +269,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.label1.Location = new System.Drawing.Point(22, 16);
+            this.label1.Location = new System.Drawing.Point(29, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.Size = new System.Drawing.Size(134, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Menu Principal";
             // 
             // btnminimizar
             // 
             this.btnminimizar.Image = global::WinAppPaginasAmarillas.Properties.Resources.Minimize;
-            this.btnminimizar.Location = new System.Drawing.Point(1060, 16);
+            this.btnminimizar.Location = new System.Drawing.Point(1413, 20);
+            this.btnminimizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnminimizar.Name = "btnminimizar";
-            this.btnminimizar.Size = new System.Drawing.Size(21, 21);
+            this.btnminimizar.Size = new System.Drawing.Size(28, 26);
             this.btnminimizar.TabIndex = 1;
             this.btnminimizar.TabStop = false;
             this.btnminimizar.Click += new System.EventHandler(this.btnminimizar_Click);
@@ -274,20 +290,38 @@
             // btncerrar
             // 
             this.btncerrar.Image = global::WinAppPaginasAmarillas.Properties.Resources.Close;
-            this.btncerrar.Location = new System.Drawing.Point(1087, 16);
+            this.btncerrar.Location = new System.Drawing.Point(1449, 20);
+            this.btncerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncerrar.Name = "btncerrar";
-            this.btncerrar.Size = new System.Drawing.Size(15, 18);
+            this.btncerrar.Size = new System.Drawing.Size(20, 22);
             this.btncerrar.TabIndex = 0;
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Items.AddRange(new object[] {
+            "Angel Melendres",
+            "Edison Gualle",
+            "Cristian Ramirez",
+            "Nina Sinaluisa",
+            "Carolina",
+            "Jhon Narvaez"});
+            this.listBox1.Location = new System.Drawing.Point(149, 383);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(165, 116);
+            this.listBox1.TabIndex = 4;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 595);
+            this.ClientSize = new System.Drawing.Size(1387, 732);
             this.Controls.Add(this.panelcontenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -324,6 +358,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 

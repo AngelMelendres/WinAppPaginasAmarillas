@@ -76,12 +76,12 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(409, 556);
+            this.btnEliminar.Location = new System.Drawing.Point(463, 556);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(160, 62);
+            this.btnEliminar.Size = new System.Drawing.Size(106, 32);
             this.btnEliminar.TabIndex = 14;
-            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.Text = "CERRAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -97,7 +97,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(91, 145);
+            this.label4.Location = new System.Drawing.Point(91, 138);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 16);
             this.label4.TabIndex = 12;
@@ -105,7 +105,7 @@
             // 
             // textBoxBusTitulo
             // 
-            this.textBoxBusTitulo.Location = new System.Drawing.Point(271, 142);
+            this.textBoxBusTitulo.Location = new System.Drawing.Point(271, 132);
             this.textBoxBusTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxBusTitulo.Name = "textBoxBusTitulo";
             this.textBoxBusTitulo.Size = new System.Drawing.Size(219, 22);
@@ -122,7 +122,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(550, 122);
+            this.btnBuscar.Location = new System.Drawing.Point(550, 109);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(160, 62);
@@ -224,7 +224,7 @@
             "POSTPAGO",
             "DOMICILIO",
             "CONTRATO"});
-            this.comboBoxCategoria.Location = new System.Drawing.Point(271, 186);
+            this.comboBoxCategoria.Location = new System.Drawing.Point(271, 168);
             this.comboBoxCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(219, 24);
@@ -233,7 +233,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(91, 189);
+            this.label3.Location = new System.Drawing.Point(91, 168);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 16);

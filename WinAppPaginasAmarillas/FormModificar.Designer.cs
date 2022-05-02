@@ -74,12 +74,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(303, 7);
+            this.label1.Location = new System.Drawing.Point(439, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 20);
+            this.label1.Size = new System.Drawing.Size(180, 20);
             this.label1.TabIndex = 9;
-            this.label1.Text = "MODIFICAR";
+            this.label1.Text = "MODIFICAR DATOS";
             // 
             // panel1
             // 
