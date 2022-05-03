@@ -109,7 +109,7 @@ namespace WinAppPaginasAmarillas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
 
-            //if (validarDatos()) { return; }
+            if (validarDatos()) { return; }
             ClassPaginasAmarillas.Instance.agregarServicio(txtTitulo.Text,txtDescripcion.Text,txtTelefono.Text,txtPropietario.Text,txtEmail.Text,txtDireccion.Text, comboBoxCategoria.Text);
             actualizarGrid();//llamamos al procedimiento que guarda en datagrid
             reseteo(); //llamamos al método que resetea            
